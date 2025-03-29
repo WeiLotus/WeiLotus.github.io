@@ -1,0 +1,78 @@
+/* header-intro.css - Xiaohan (Lotus) Wei
+   Custom styles for avatar, title, and intro list in the header
+   Last updated: 2025-03 */
+
+.app-header {
+  padding: 2.5em;
+  background-color: #FAF8F6;
+  color: #333333;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+@media (min-width: 940px) {
+  .app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/* Avatar settings */
+.app-header-avatar {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 0.5rem solid #E2C1C0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* ✅ 动画 */
+}
+
+.app-header-avatar:hover {
+  transform: scale(1.02); /* 稍稍放大 */
+  box-shadow: 0 0 18px rgba(226, 193, 192, 0.5); /* 粉色柔光晕 */
+}
+
+/* Title under avatar */
+.app-header-title {
+  display: block;
+  font-size: 1.6em;
+  font-weight: 700;
+  color: 	#A77A95;
+  margin: 0.67em 0;
+}
+
+/* Intro list under name */
+.app-header ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 1em;
+  max-width: 90%;
+  margin-inline: auto;
+  color:#9996A5;
+  text-align: left; 
+}
+
+/* Optional: Adjust avatar for mobile */
+@media (max-width: 600px) {
+  .app-header-avatar {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .app-header-title {
+    font-size: 1.5em;
+  }
+
+  .app-header ul {
+    font-size: 0.9rem;
+  }
+}
